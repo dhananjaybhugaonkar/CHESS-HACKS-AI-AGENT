@@ -1,0 +1,64 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>24fa8ec0-1f10-4d69-9333-c2658c84740e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>AIChessAgent.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>AIChessAgent</Name>
+    <RootNamespace>AIChessAgent</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AIChessAgent.py" />
+    <Compile Include="src\chessboard.py" />
+    <Compile Include="src\game.py" />
+    <Compile Include="src\config.py" />
+    <Compile Include="src\game_options.py" />
+    <Compile Include="src\openingBook.py" />
+    <Compile Include="src\engine.py" />
+    <Compile Include="src\piece_moves.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\images\" />
+    <Folder Include="src\sounds\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\images\BBishop.png" />
+    <Content Include="src\images\BKing.png" />
+    <Content Include="src\images\BKnight.png" />
+    <Content Include="src\images\BPawn.png" />
+    <Content Include="src\images\BQueen.png" />
+    <Content Include="src\images\BRook.png" />
+    <Content Include="src\images\logo.png" />
+    <Content Include="src\images\WBishop.png" />
+    <Content Include="src\images\WKing.png" />
+    <Content Include="src\images\WKnight.png" />
+    <Content Include="src\images\WPawn.png" />
+    <Content Include="src\images\WQueen.png" />
+    <Content Include="src\images\WRook.png" />
+    <Content Include="src\sounds\capture.wav" />
+    <Content Include="src\sounds\move.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
